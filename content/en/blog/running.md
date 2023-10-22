@@ -1,6 +1,6 @@
 ---
 author: "Christopher Bradley"
-title: "Ultra running, rogaining & orienteering"
+title: "Ultra running, rogaining & orienteering & fun"
 date: 2022-11-19
 description: "Maps, events and tips for running a very long way"
 thumbnail: /stromlo.jpg
