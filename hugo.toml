@@ -1,0 +1,143 @@
+baseurl = "https://christopherbradley.github.io"
+metaDataFormat = "yaml"
+title = "Christopher Bradley"
+theme = "blist"
+googleAnalytics = "G-1TMFY1N614"
+
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = true
+[languages]
+  [languages.en]
+    contentDir = "content/en" #English
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      introTitle = "Hi! I'm Chris"
+      introSubtitle = """This website is to share links that I've found useful :) <br><br>
+                     """
+      introPhoto = "/picture.jpg"
+      logo = "/logo.png"
+
+    [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[languages.en.menu.main]]
+        name = "Sustainability"
+        url = "page/sustainability"
+        weight = 2
+
+    [[languages.en.menu.main]]
+        name = "Maps"
+        url = "page/maps"
+        weight = 3
+
+   [[languages.en.menu.main]]
+        name = "Coding"
+        url = "page/coding"
+        weight = 4
+
+   [[languages.en.menu.main]]
+       name = "Rules"
+       url = "page/rules"
+       weight = 5
+
+    [[languages.en.menu.main]]
+        name = "Contacts"
+        url = "page/contacts"
+        weight = 6
+
+[params]
+  # Enable the darkmode toggle in header
+  darkModeToggle = true
+  
+  # Enable search in header
+  enableSearch = true
+
+  # Option to customize the search parameters of a page
+  # Below are the supported options; Note that including entire content
+  # may slowdown the loading of search results
+  # Title of page is included by default
+  searchKeys = [
+    "tags",
+    "date",
+    "categories",
+    "summary",
+    "content",
+    "link",
+    "author"
+  ]
+
+  # Custom copyright - optional
+  # TODO Change the a href link option to be blue.
+  copyright = "Copyright © 2023 - Christopher Bradley · Made with <strong><a href=https://gohugo.io/>Hugo</a></strong> and <strong><a href=https://github.com/apvarun/blist-hugo-theme>Blist</a>"
+  favicon = "/favicon.ico</strong>"
+  # The Orange Book image came from icons8.com here: href="https://icons8.com/icon/IYgsr2y1M2w8/orange-book"
+  # The Sunset Glass image came from here: https://www.minecraftskins.com/skin/816261/glass-sunset/
+
+  # Color for the intro details and social links block, not applicable for dark mode
+  # Supported values: Any color from TailwindCSS default colors
+  # Reference: https://tailwindcss.com/docs/customizing-colors
+  # This page has the "bg-blue-100": https://tailwindcss.com/docs/background-color
+  ascentColor = "bg-blue-100"
+
+  # The page bundle that is shown on the front page
+  frontBundle = "blog"
+
+  # Used to hide the post metadata such as posted date, reading time and word count
+  # Can be used at site level or page level
+  hideMeta = false
+
+  # To hide "Other languages" option if the post is available in multiple languages
+  # Can be used at site level or page level
+  hideOtherLanguages = true
+
+  # Add support for Table of contents
+  # Can be added to a page level also in markdown frontmatter
+  toc = true
+
+  # Hides the thumbnail in post view
+  # Thumbnails in home and blog pages will still be shown
+  # This setting can also be in page's markdown file
+  hidePageThumbnail = false
+
+# Comments system
+[params.comments]
+  # Supports disqus, giscus and utterances
+  # Check hugo docs for setting up disqus
+  system = "giscus"
+
+  # Options for giscus, exclude hyphens
+  repo = ""
+  repoid = ""
+  category = ""
+  categoryid = ""
+  mapping = ""
+  strict = ""
+  reactionsenabled = ""
+  emitmetadata = ""
+  inputposition = ""
+  theme = ""
+
+  # Options for utterances, exclude hyphens
+  # repo = ""
+  # issueterm = ""
+  # theme = ""
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true
