@@ -28,6 +28,11 @@ defaults:
     shell: bash
 
 jobs:
+  # Log base_url and page_url
+  run: |
+    echo "base_url: ${{ steps.pages.outputs.base_url }}"
+    echo "page_url: ${{ steps.deployment.outputs.page_url }}"
+
   # Build job
   build:
     runs-on: ubuntu-latest
